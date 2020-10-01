@@ -18,7 +18,7 @@ First of all, the Bankmarketing dataset was uploaded as an Azure Dataset:
 Then the AutoML algorithm was run to select the best algorithm to use in the predictions. When the experiment completed, the best model was a Voting Ensemble, as can be seen here:
 ![](exp_complete.png)
 
-![](best model.png)
+![](best_model.png)
 
 The best model was then deployed and the logs.py script was run to enable Application Insights for this model. In the screenshot below, we see the deployed model with the Application Insights enabled.
 ![](application_insights_enabled)
