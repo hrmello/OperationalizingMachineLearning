@@ -21,7 +21,7 @@ Then the AutoML algorithm was run to select the best algorithm to use in the pre
 ![](best_model.png)
 
 The best model was then deployed and the logs.py script was run to enable Application Insights for this model. In the screenshot below, we see the deployed model with the Application Insights enabled.
-![](application_insights_enabled)
+![](application_insights_enabled.png)
 
 Here is the `logs.py` output after running as well:
 ![](terminal_logs.png)
