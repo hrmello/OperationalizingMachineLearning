@@ -64,3 +64,5 @@ Another possible improvement would be to try using Deep Learning, which is curre
 
 ## Screen Recording
 https://youtu.be/5egyHn5UPi4
+
+(if for any reason the link doesn't work, the video is in the github repository, called endpoint_final.mp4
