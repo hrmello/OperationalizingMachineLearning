@@ -13,7 +13,7 @@ In this diagram, we have four basic steps:
 
 ## Key Steps
 First of all, the Bankmarketing dataset was uploaded as an Azure Dataset:
-![](bankmarketing_dataset.png)
+![](bm_dataset.png)
 
 Then the AutoML algorithm was run to select the best algorithm to use in the predictions. When the experiment completed, the best model was a Voting Ensemble, as can be seen here:
 ![](exp_complete.png)
@@ -26,6 +26,17 @@ The best model was then deployed and the logs.py script was run to enable Applic
 Here is the `logs.py` output after running as well:
 ![](terminal_logs.png)
 
+Once the endpoint was active, we could use Swagger to look at its methods and responses, as can be seen in the following screenshots:
+![](swagger.png)
+
+![](post_response_swagger.png)
+
+![](get_response_swagger.png)
+
+We could also use Apache Benchmark to know what would be the acceptable performance of our endpoint working under normal conditions:
+
+![](benchmark.png)
+
 After that, we were able to consume the model using its REST API and the `endpoints.py` script. 
 ![](endpoint_result.png)
 
@@ -33,10 +44,23 @@ Next, I ran the notebook provided in the starter files in order to create and pu
 Here is a screenshot of the pipeline running:
 ![](scheduled_run.png)
 
-And one after it has finished, showing its REST endpoint, with its Status as Active and the pipeline itself shown on the left.
-![](pipeline_rest_endpoint.png)
+While in the notebook, we see the RunDetails command showing all the steps performed:
+![](widget_pipeline_complete.png)
 
-It is also possible to see in Jupyter's notebook in this directory that the RunWidget Details shows all the steps when called. 
+And one after it has finished, it is posible to find in Published Pipeline overview its REST endpoint, with its Status as Active and the pipeline itself shown on the left.
+
+![](published_pipeline_overview.png)
+
+And on Pipeline Endpoints, we see our pipelines and also their Active statuses.
+![](pipeline_endpoint_active.png)
+
+And also the scheduled runs:
+![](pipeline_runs.png)
+
+## Improvement steps
+In the future, the performance of the algorithm may be better if we let the model train for more time. However, the accuracy is already very high and it has probably reached the possible limit performance for a machine learning algorithm using the present dataset. An alternative to improve the accuracy would be to acquire more data and run AutoML again. 
+
+Another possible improvement would be to try using Deep Learning, which is currently not used by AutoMl in the runs we tried.
 
 ## Screen Recording
-https://www.youtube.com/watch?v=ZPyMb8yDNG8
+https://youtu.be/5egyHn5UPi4
